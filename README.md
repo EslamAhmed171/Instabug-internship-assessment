@@ -50,7 +50,7 @@ int main() {
     }
     return 0;
 }
-```cpp
+```
 
 ## Problem Description
 
@@ -117,3 +117,4 @@ while (nR || nC || nD) {
 }
 ans += coins / (r * pR + c * pC + d * pD);
 cout << ans << endl;
+```
