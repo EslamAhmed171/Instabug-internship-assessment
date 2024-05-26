@@ -29,10 +29,7 @@ Sayed has a distributed system that consists of multiple machines. Each machine 
 1
 ### Solution
 Calculate how many units needed for each (RAM, CPU, and Disk units) to be used to build a machine.
-for RAM the machines will be NR / R.
-for CPU the machines will be NC / C.
-for Disk units, the machines will be ND / D.
-The answer will be a minimum of (NR / R, NC / C, ND / D).
+The answer will be a the minimum over all three values.
 
 ```cpp
 #include <iostream>
@@ -95,7 +92,7 @@ For each test case, print a single integer representing the maximum number of ma
 ## Solution
 
 As an easy version, calculate how many machines can be built using the current cluster capacity. 
-After that, there might be some units of (RAM, CPU, and Disk space) remaining, it is optimal to use these units before paying for new ones, so while you have a capacity in the cluster calculate the remaining units needed to build new machine if you can afford it, otherwise break the loop (constraints are small 1 ≤ NR, NC, ND ≤ 100, so you will loop 100 times in the worst case, binary search can be used instead if the constraints were up to 1e9 or 1e18).
+After that, there might be some units of (RAM, CPU, and Disk space) remaining, it is optimal to use these units before paying for new ones, so while you have a capacity in the cluster calculate the remaining units needed to build new machine if you can afford it then buy it and loop again, otherwise break the loop (constraints are small 1 ≤ NR, NC, ND ≤ 100, so you will loop 100 times in the worst case, binary search can be used instead if the constraints were up to 1e9 or 1e18).
 Finally, if there are still coins remaining with you, calculate how many machines you can afford using the remaining money.
 
 ```cpp
