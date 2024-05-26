@@ -50,7 +50,7 @@ int main() {
     }
     return 0;
 }
-
+```cpp
 
 ## Problem Description
 
