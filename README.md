@@ -39,6 +39,8 @@ The answer will be a minimum of (NR / R, NC / C, ND / D).
 using namespace std;
 
 int main() {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
     int T;
     cin >> T;
     while (T--) {
@@ -97,10 +99,11 @@ Finally, if there are still coins remaining with you, calculate how many machine
 ```cpp
 #include <iostream>
 #include <algorithm>
-
 using namespace std;
 
 int main() {
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
     int T;
     cin >> T;
     while (T--) {
@@ -113,7 +116,6 @@ int main() {
         nR -= r * ans;
         nC -= c * ans;
         nD -= d * ans;
-        cout << ans << endl;
         while (nR || nC || nD) {
             long long need = (r - min(nR, r)) * pR + (c - min(nC, c)) * pC + (d - min(nD, d)) * pD;
             if (need > coins)
