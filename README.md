@@ -93,8 +93,8 @@ For each test case, print a single integer representing the maximum number of ma
 ## Solution
 
 As an easy version, calculate how many machines can be built using the current cluster capacity. 
-After that, there might be some units of (RAM, CPU, and Disk space) remaining, it is optimal to use these units before paying for new ones, so while you have a capacity in the cluster calculate the remaining units needed to build it if you can afford it, otherwise break the loop (constraints are low 1 ≤ NR, NC, ND ≤ 100, so you will loop 100 times in the worst case, binary search can be used instead if the constraints were up to 1e9 or 1e18).
-Finally, if there are still coins remaining with you, calculate how many machines you can afford (N / (R * PR + C * PC + D * PD)).
+After that, there might be some units of (RAM, CPU, and Disk space) remaining, it is optimal to use these units before paying for new ones, so while you have a capacity in the cluster calculate the remaining units needed to build new machine if you can afford it, otherwise break the loop (constraints are low 1 ≤ NR, NC, ND ≤ 100, so you will loop 100 times in the worst case, binary search can be used instead if the constraints were up to 1e9 or 1e18).
+Finally, if there are still coins remaining with you, calculate how many machines you can afford using the remaining money.
 
 ```cpp
 #include <iostream>
