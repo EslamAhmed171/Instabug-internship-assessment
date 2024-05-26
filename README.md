@@ -28,8 +28,8 @@ Sayed has a distributed system that consists of multiple machines. Each machine 
 2 <br />
 1
 ### Solution
-Calculate how many units needed for each (RAM, CPU, and Disk units) to be used to build a machine.
-The answer will be a the minimum over all three values.
+Calculate how many machines can every (RAM, CPU, and Disk units) contribute into building it.
+The answer will be the minimum over all three values.
 
 ```cpp
 #include <iostream>
