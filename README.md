@@ -55,7 +55,9 @@ int main() {
 }
 ```
 
-## Problem Description
+## Problem 2: Hard Version
+
+### Description
 
 After solving the easy version, Sayed was able to find the maximum number of machines he can have based on the requirements and the cluster capacity. However, the numbers are not satisfactory. Sayed received approval from management to purchase extra RAM, CPU, and Disk resources to increase the number of machines.
 
