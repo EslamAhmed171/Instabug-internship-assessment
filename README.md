@@ -95,26 +95,38 @@ After that, there might be some units of (RAM, CPU, and Disk space), it is optim
 Finally, if there are still coins remaining with you, calculate how many machines you can afford (N / (R * PR + C * PC + D * PD)).
 
 ```cpp
-long long r, c, d;
-long long nR, nC, nD;
-long long pR, pC, pD;
-long long coins;
-cin >> r >> c >> d >> nR >> nC >> nD >> pR >> pC >> pD >> coins;
-long long ans = min(nR / r, min(nC / c, nD / d));
-nR -= r * ans;
-nC -= c * ans;
-nD -= d * ans;
-cout << ans << endl;
-while (nR || nC || nD) {
-    long long need = (r - min(nR, r)) * pR + (c - min(nC, c)) * pC + (d - min(nD, d)) * pD;
-    if (need > coins)
-        break;
-    nR -= min(nR, r);
-    nC -= min(nC, c);
-    nD -= min(nD, d);
-    coins -= need;
-    ans++;
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    while (T--) {
+        long long r, c, d;
+        long long nR, nC, nD;
+        long long pR, pC, pD;
+        long long coins;
+        cin >> r >> c >> d >> nR >> nC >> nD >> pR >> pC >> pD >> coins;
+        long long ans = min(nR / r, min(nC / c, nD / d));
+        nR -= r * ans;
+        nC -= c * ans;
+        nD -= d * ans;
+        cout << ans << endl;
+        while (nR || nC || nD) {
+            long long need = (r - min(nR, r)) * pR + (c - min(nC, c)) * pC + (d - min(nD, d)) * pD;
+            if (need > coins)
+                break;
+            nR -= min(nR, r);
+            nC -= min(nC, c);
+            nD -= min(nD, d);
+            coins -= need;
+            ans++;
+        }
+        ans += coins / (r * pR + c * pC + d * pD);
+        cout << ans << endl;
+    }
+    return 0;
 }
-ans += coins / (r * pR + c * pC + d * pD);
-cout << ans << endl;
 ```
