@@ -28,7 +28,7 @@ Sayed has a distributed system that consists of multiple machines. Each machine 
 2 <br />
 1
 ### Solution
-Calculate how many machines can be constructed using each (RAM, CPU, and Disk units).
+Calculate how many units needed for each (RAM, CPU, and Disk units) to be used to build a machine.
 for RAM the machines will be NR / R.
 for CPU the machines will be NC / C.
 for Disk units, the machines will be ND / D.
