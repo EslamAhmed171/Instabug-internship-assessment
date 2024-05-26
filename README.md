@@ -17,14 +17,15 @@ Sayed has a distributed system that consists of multiple machines. Each machine 
 
 ### Example
 #### Input
-2
-2 5 3
-11 14 6
-6 1 2
-25 1 15
+2 <br />
+2 5 3 <br />
+11 14 6 <br />
+<br />
+6 1 2 <br />
+25 1 15 <br />
 
 #### Output
-2
+2 <br />
 1
 ### Solution
 Calculate how many machines can be constructed using each (RAM, CPU, and Disk units).
@@ -76,20 +77,19 @@ For each test case, print a single integer representing the maximum number of ma
 ## Example
 
 ### Input
-2
-2 5 3
-11 14 6
-2 2 5
-70
-6 1 2
-25 1 15
-2 2 2
-1
-
+2 <br />
+2 5 3 <br />
+11 14 6 <br />
+2 2 5 <br />
+70 <br />
+<br />
+6 1 2 <br />
+25 1 15 <br />
+2 2 2 <br />
+1 
 ### Output
-5
+5 <br />
 1
-
 ## Solution
 
 As an easy version, calculate how many machines can be built using the current cluster capacity. 
