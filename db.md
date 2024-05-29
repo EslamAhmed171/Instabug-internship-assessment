@@ -2,12 +2,10 @@
 This setion contains solutions to the problems of Instabug internship assessment db section.
 
 ## Problem 1: Find top 100 students!
-
-### Problem Statement
 Given 3 tables, students(id, name) , courses(id, name) , grades(id, course_id, student_id, grade), find the top 100 students based on their average grades sorted descendingly by the average grade and in case multiple students have the same average grade, sort them lexicographically in ascending order by their names.
 Your query should output a table with the following columns (name, average_grade).
 
-### Solution
+### Solution:
 ```sql
 SELECT DISTINCT 
     x.name AS name, 
@@ -28,7 +26,7 @@ LIMIT
 Given 3 tables, students(id, name) , courses(id, name) , grades(id, course_id, student_id, grade), for each student, get all the courses that he/she is enrolled in along with the grade he/she scored for each course. Order the result by the student name in ascending order and if there is a tie, break it with the course name in ascending order and if there is a tie break it with the grade in ascending order.
 The final result should have 3 columns with names (name, course, grade).
 
-### Solution
+### Solution:
 
 ```sql
 SELECT DISTINCT 
@@ -50,7 +48,7 @@ ORDER BY
 ## Problem 3: Find the most popular course!
 Given 3 tables, students(id, name) , courses(id, name) , grades(id, course_id, student_id, grade), get the name of the most popular course (the one where the most students are enrolled) and if there is a tie, get the course that's lexicographically the smallest.
 
-### Solution
+### Solution:
 
 ```sql
 SELECT x.name
@@ -67,7 +65,7 @@ LIMIT 1
 ## Problem 4: What are the catergories of bugs we have?
 Given a table called "bugs" with the following columns (id, token, title, category, device, reported_at, created_at, updated_at). Select all distinct bug categories.
 
-### Solution
+### Solution:
 
 ```sql
 SELECT DISTINCT category FROM bugs
@@ -77,7 +75,7 @@ SELECT DISTINCT category FROM bugs
 Note: Naive solution didn't pass, as the table has 10 million records. I used the available indexes i have in the database and I'm not sure if my solution is optimal.
 Given a table called "bugs" with the following columns (id, token, title, category, device, reported_at, created_at, updated_at), find how many bugs were created on "2019-03-01" or later. Your query should produce a table with one column called "count".
 
-### Solution
+### Solution:
 
 ```sql
 SELECT
@@ -94,7 +92,7 @@ WHERE
 Note: Naive solution didn't pass, as the table has 10 million records. I used the available indexes i have in the database and I'm not sure if my solution is optimal.
 Given a table called "bugs" with the following columns (id, token, title, category, device, reported_at, created_at, updated_at), find the title of the bug with token = "token660" and reported_at on "2020-08-30".
 
-### Solution
+### Solution:
 
 ```sql
 SELECT
