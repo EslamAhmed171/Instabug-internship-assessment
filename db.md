@@ -1,5 +1,5 @@
 # Instabug-internship-assessment
-This repository contains solutions to the problems of Instabug internship assessment db section
+This setion contains solutions to the problems of Instabug internship assessment db section.
 
 ## Problem 1: Find top 100 students!
 
@@ -57,8 +57,10 @@ SELECT x.name
     FROM courses x
 JOIN
     grades y ON y.course_id = x.id
-GROUP BY x.id, x.name
-ORDER BY COUNT(*) DESC, x.name ASC
+GROUP BY
+    x.id, x.name
+ORDER BY
+    COUNT(*) DESC, x.name ASC
 LIMIT 1
 ```
 
