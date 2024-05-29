@@ -22,7 +22,7 @@ LIMIT
     100
 ```
 
-## Problem 2: Generate students 100 grade report!
+## Problem 2: Generate students grade report!
 Given 3 tables, students(id, name) , courses(id, name) , grades(id, course_id, student_id, grade), for each student, get all the courses that he/she is enrolled in along with the grade he/she scored for each course. Order the result by the student name in ascending order and if there is a tie, break it with the course name in ascending order and if there is a tie break it with the grade in ascending order.
 The final result should have 3 columns with names (name, course, grade).
 
