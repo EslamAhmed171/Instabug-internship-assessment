@@ -7,7 +7,7 @@ Your query should output a table with the following columns (name, average_grade
 
 ### Solution:
 ```sql
-SELECT DISTINCT 
+SELECT 
     x.name AS name, 
     AVG(y.grade) AS average_grade 
 FROM 
@@ -15,7 +15,7 @@ FROM
 LEFT JOIN 
     grades y ON x.id = y.student_id
 GROUP BY 
-    s.name
+    x.name
 ORDER BY 
     AVG(grade) DESC, x.name ASC
 LIMIT 
@@ -54,7 +54,7 @@ Given 3 tables, students(id, name) , courses(id, name) , grades(id, course_id, s
 SELECT x.name
     FROM courses x
 JOIN
-    grades y ON y.course_id = x.id
+    grades y ON x.id = y.course_id
 GROUP BY
     x.id, x.name
 ORDER BY
@@ -80,7 +80,8 @@ Given a table called "bugs" with the following columns (id, token, title, catego
 ```sql
 SELECT
     COUNT(y.created_at) AS count 
-    FROM bugs AS x
+FROM
+    bugs AS x
 JOIN
     bugs AS y ON x.id = y.id USE INDEX
     (PRIMARY, index_bugs_on_category_and_token_and_reported_at) 
