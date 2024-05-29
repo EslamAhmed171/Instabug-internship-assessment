@@ -1,5 +1,5 @@
 # Instabug-internship-assessment
-This repository contains solutions to the problems of Instabug internship assessment problem-solving section
+This section contains solutions to the problems of Instabug internship assessment problem-solving section
 
 ## Problem 1: Easy Version
 
